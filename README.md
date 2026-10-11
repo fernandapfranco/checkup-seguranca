@@ -4,7 +4,7 @@ Ferramenta web de autoavaliação que mostra a usuários de Android e iPhone qua
 
 Ela é o artefato do Trabalho de Conclusão de Curso **"Arquitetura de Segurança em Dispositivos Móveis: Análise Comparativa entre Android e iOS frente à Engenharia Social e a Adoção de Controles pelo Usuário Final"** (Análise e Desenvolvimento de Sistemas, UNISINOS, 2026). A ordem das recomendações e os percentuais exibidos vêm de um questionário respondido por 142 usuários brasileiros de smartphone.
 
-**Acesse:** https://SEU-USUARIO.github.io/checkup-seguranca/
+**Acesse:** https://fernandapfranco.github.io/checkup-seguranca/
 
 ## Como funciona
 

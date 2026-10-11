@@ -1,0 +1,312 @@
+{
+  "versao": "1.1.0",
+  "revisado_em": "2026-10",
+  "base_da_pesquisa": "Questionário aplicado a 142 usuários brasileiros de smartphone entre 29/05 e 17/06/2026 (TCC, UNISINOS).",
+  "convencao": "Trechos entre [[ e ]] são caminhos de menu e aparecem em negrito. Nenhum texto deste arquivo pode conter HTML.",
+  "regras": [
+    {
+      "id": "whats",
+      "titulo": "Confirmação em duas etapas no WhatsApp",
+      "prioridade": 1,
+      "pergunta": "O seu WhatsApp pede, de tempos em tempos, um PIN de 6 dígitos (confirmação em duas etapas)?",
+      "opcoes": [
+        {
+          "valor": "sim",
+          "rotulo": "Sim, está ativada",
+          "status": "ok"
+        },
+        {
+          "valor": "nao",
+          "rotulo": "Não",
+          "status": "ajustar"
+        },
+        {
+          "valor": "naosei",
+          "rotulo": "Não sei",
+          "status": "verificar"
+        }
+      ],
+      "evidencia": "Só 47,9% dos participantes usavam verificação em duas etapas no WhatsApp, e 26,1% já tinham tido alguma conta invadida.",
+      "passos": {
+        "android": [
+          "Abra o WhatsApp, toque nos três pontinhos (⋮) e depois em [[Configurações › Conta › Confirmação em duas etapas]].",
+          "Toque em [[Ativar]] e crie um PIN de 6 dígitos que você não usa em mais nada.",
+          "Cadastre um e-mail de recuperação quando o app pedir."
+        ],
+        "ios": [
+          "Abra o WhatsApp e toque na aba [[Configurações › Conta › Confirmação em duas etapas]].",
+          "Toque em [[Ativar]] e crie um PIN de 6 dígitos que você não usa em mais nada.",
+          "Cadastre um e-mail de recuperação quando o app pedir."
+        ]
+      },
+      "nota": "Nunca informe esse PIN nem o código de 6 dígitos que chega por SMS, nem para quem diz ser do suporte."
+    },
+    {
+      "id": "conta",
+      "titulo": "Duas etapas na conta principal do celular",
+      "prioridade": 2,
+      "pergunta": "A sua conta principal (Conta do Google no Android, Conta Apple no iPhone) tem verificação em duas etapas?",
+      "opcoes": [
+        {
+          "valor": "sim",
+          "rotulo": "Sim",
+          "status": "ok"
+        },
+        {
+          "valor": "nao",
+          "rotulo": "Não",
+          "status": "ajustar"
+        },
+        {
+          "valor": "naosei",
+          "rotulo": "Não sei",
+          "status": "verificar"
+        }
+      ],
+      "evidencia": "22,5% dos participantes não usavam verificação em duas etapas em nenhuma conta. Entre quem tinha 55 anos ou mais, só 47,8% usavam.",
+      "passos": {
+        "android": [
+          "Abra [[Configurações › Google › Gerenciar sua Conta do Google]].",
+          "Vá à aba [[Segurança]] e toque em [[Verificação em duas etapas]].",
+          "Siga as telas para ativar. Na mesma aba, em [[Chaves de acesso]], você pode criar uma chave que dispensa a senha."
+        ],
+        "ios": [
+          "Abra [[Ajustes]] e toque no seu nome, no topo.",
+          "Entre em [[Iniciar Sessão e Segurança]] (em versões antigas, [[Senha e Segurança]]).",
+          "Confira se [[Autenticação de Dois Fatores]] aparece como ativada. Se não aparecer, toque e siga as telas."
+        ]
+      },
+      "nota": "A conta principal recupera todas as outras. Se ela cair, o invasor consegue trocar as senhas do resto."
+    },
+    {
+      "id": "metodo",
+      "titulo": "Códigos por aplicativo, não por SMS",
+      "prioridade": 3,
+      "pergunta": "Quando um site ou app pede um código de confirmação, como ele costuma chegar?",
+      "opcoes": [
+        {
+          "valor": "app",
+          "rotulo": "Por app autenticador ou chave de acesso",
+          "status": "ok"
+        },
+        {
+          "valor": "notif",
+          "rotulo": "Por notificação no próprio app",
+          "status": "ok"
+        },
+        {
+          "valor": "sms",
+          "rotulo": "Por SMS ou e-mail",
+          "status": "ajustar"
+        },
+        {
+          "valor": "nenhum",
+          "rotulo": "Não uso códigos de confirmação",
+          "status": "ajustar"
+        }
+      ],
+      "evidencia": "Entre os participantes que usavam duas etapas, 51,8% recebiam o código por SMS ou e-mail, canais mais fáceis de desviar, por exemplo com a clonagem do chip.",
+      "passos": {
+        "android": [
+          "Instale pela Play Store um app autenticador, como o Google Authenticator ou o Microsoft Authenticator.",
+          "Em cada conta importante, abra as configurações de segurança e troque o SMS por [[App autenticador]].",
+          "Quando a conta oferecer [[Chave de acesso]], prefira essa opção: não há código para alguém pedir."
+        ],
+        "ios": [
+          "Instale pela App Store um app autenticador, ou use o app [[Senhas]] do próprio iPhone, que também gera códigos.",
+          "Em cada conta importante, abra as configurações de segurança e troque o SMS por [[App autenticador]].",
+          "Quando a conta oferecer [[Chave de acesso]], prefira essa opção: não há código para alguém pedir."
+        ]
+      },
+      "nota": "O SMS ainda é melhor do que nada. Troque quando puder, começando pelo e-mail e pelo banco."
+    },
+    {
+      "id": "atual",
+      "titulo": "Atualizações automáticas do sistema",
+      "prioridade": 4,
+      "pergunta": "Quando aparece uma atualização do sistema, você costuma instalar:",
+      "opcoes": [
+        {
+          "valor": "logo",
+          "rotulo": "Assim que aparece",
+          "status": "ok"
+        },
+        {
+          "valor": "dias",
+          "rotulo": "Depois de alguns dias ou semanas",
+          "status": "ajustar"
+        },
+        {
+          "valor": "raro",
+          "rotulo": "Raramente, ou não sei verificar",
+          "status": "ajustar"
+        }
+      ],
+      "evidencia": "Só 49,3% atualizavam assim que a atualização aparecia. Entre eles, 20,0% relataram conta invadida, contra 31,9% dos demais (tendência, sem significância estatística).",
+      "passos": {
+        "android": [
+          "Abra [[Configurações › Sistema › Atualização do sistema]]. Em aparelhos Samsung: [[Configurações › Atualização de software]].",
+          "Ative o download automático por Wi-Fi e instale o que estiver pendente.",
+          "Em [[Configurações › Segurança e privacidade]], confira também a [[Atualização do sistema do Google Play]]."
+        ],
+        "ios": [
+          "Abra [[Ajustes › Geral › Atualização de Software]].",
+          "Toque em [[Atualizações Automáticas]] e ative a instalação das atualizações do iOS.",
+          "Deixe ativada também a opção de [[Respostas de Segurança]], que corrige falhas sem esperar a próxima versão."
+        ]
+      },
+      "nota": "Atualizações corrigem falhas que já estão sendo exploradas. Deixe o celular carregando à noite para que elas instalem sozinhas."
+    },
+    {
+      "id": "loja",
+      "titulo": "Aplicativos só da loja oficial",
+      "prioridade": 5,
+      "rebaixar_em": [
+        "ios"
+      ],
+      "pergunta": "Você instala aplicativos fora da loja oficial (Play Store ou App Store)?",
+      "opcoes": [
+        {
+          "valor": "nao",
+          "rotulo": "Não, só pela loja oficial",
+          "status": "ok"
+        },
+        {
+          "valor": "sim",
+          "rotulo": "Sim, às vezes ou com frequência",
+          "status": "ajustar"
+        },
+        {
+          "valor": "naosei",
+          "rotulo": "Não sei o que isso significa",
+          "status": "verificar"
+        }
+      ],
+      "evidencia": "30,5% dos usuários de Android instalavam apps fora da Play Store, contra 5,1% no iPhone. Outros 6,3% não sabiam o que era instalar fora da loja.",
+      "passos": {
+        "android": [
+          "Abra [[Configurações › Apps › Acesso especial a apps › Instalar apps desconhecidos]].",
+          "Deixe todos os apps da lista como [[Não permitido]], principalmente WhatsApp, navegador e gerenciador de arquivos.",
+          "Na Play Store, toque na sua foto › [[Play Protect]] › engrenagem e ative [[Verificar apps com o Play Protect]]."
+        ],
+        "ios": [
+          "Instale apps só pela App Store.",
+          "Abra [[Ajustes › Geral › VPN e Gerenciamento de Dispositivos]].",
+          "Se aparecer um perfil que você não reconhece e que não foi instalado pela sua empresa ou escola, toque nele e remova."
+        ]
+      },
+      "nota": "Golpistas enviam arquivos .apk por WhatsApp fingindo ser o app do banco ou de um órgão público. App de verdade vem da loja."
+    },
+    {
+      "id": "bloq",
+      "titulo": "Bloqueio de tela com PIN, senha ou biometria",
+      "prioridade": 6,
+      "pergunta": "Como você desbloqueia o celular?",
+      "opcoes": [
+        {
+          "valor": "forte",
+          "rotulo": "PIN, senha, digital ou rosto",
+          "status": "ok"
+        },
+        {
+          "valor": "padrao",
+          "rotulo": "Só com padrão de desenho",
+          "status": "ajustar"
+        },
+        {
+          "valor": "nada",
+          "rotulo": "Não uso bloqueio",
+          "status": "ajustar"
+        }
+      ],
+      "evidencia": "9,8% dos usuários de Android usavam apenas o padrão de desenho, e 2,8% da amostra não usava bloqueio algum.",
+      "passos": {
+        "android": [
+          "Abra [[Configurações › Segurança e privacidade › Bloqueio de tela]] (em alguns aparelhos, [[Tela de bloqueio]]).",
+          "Escolha [[PIN]] com 6 dígitos ou mais, ou [[Senha]].",
+          "Na mesma área, cadastre impressão digital ou reconhecimento facial para não precisar digitar toda hora."
+        ],
+        "ios": [
+          "Abra [[Ajustes › Face ID e Código]] (ou [[Touch ID e Código]]).",
+          "Toque em [[Ativar Código]]. Em [[Opções de Código]], prefira 6 dígitos ou mais.",
+          "Cadastre o rosto ou a digital na mesma tela."
+        ]
+      },
+      "nota": "O padrão de desenho deixa marca de dedo na tela e é fácil de decorar olhando por cima do ombro."
+    },
+    {
+      "id": "filtro",
+      "titulo": "Filtro de mensagens e ligações suspeitas",
+      "prioridade": 7,
+      "pergunta": "O seu celular filtra SMS e ligações de números desconhecidos ou marcados como spam?",
+      "opcoes": [
+        {
+          "valor": "sim",
+          "rotulo": "Sim",
+          "status": "ok"
+        },
+        {
+          "valor": "nao",
+          "rotulo": "Não",
+          "status": "ajustar"
+        },
+        {
+          "valor": "naosei",
+          "rotulo": "Não sei",
+          "status": "verificar"
+        }
+      ],
+      "evidencia": "89,4% dos participantes já tinham recebido mensagem falsa de banco, entrega ou órgão público, e 69,0% já tinham recebido ligação de golpe.",
+      "passos": {
+        "android": [
+          "No app [[Mensagens do Google]], toque na sua foto › [[Configurações do Mensagens › Proteção contra spam]] e ative.",
+          "No app [[Telefone]], toque em ⋮ › [[Configurações › Identificador de chamadas e spam]] e ative.",
+          "Em aparelhos Samsung, procure [[Bloquear números e spam]] nas configurações do app Telefone."
+        ],
+        "ios": [
+          "Abra [[Ajustes › Apps › Mensagens]] (no iOS 17 ou anterior, [[Ajustes › Mensagens]]) e ative [[Filtrar Remetentes Desconhecidos]].",
+          "Em [[Ajustes › Apps › Telefone]], avalie ativar [[Silenciar Ligações Desconhecidas]].",
+          "Essa última opção silencia todo número fora dos contatos. Deixe-a desligada se você recebe ligações de quem não está na agenda."
+        ]
+      },
+      "nota": "Filtro nenhum pega tudo. Na dúvida, não clique: abra o app oficial ou ligue para o número que você já conhece."
+    },
+    {
+      "id": "roubo",
+      "titulo": "Localizar e proteger o aparelho em caso de roubo",
+      "prioridade": 8,
+      "pergunta": "Se o celular for roubado, você consegue localizá-lo e bloqueá-lo à distância?",
+      "opcoes": [
+        {
+          "valor": "sim",
+          "rotulo": "Sim, está configurado",
+          "status": "ok"
+        },
+        {
+          "valor": "nao",
+          "rotulo": "Não",
+          "status": "ajustar"
+        },
+        {
+          "valor": "naosei",
+          "rotulo": "Não sei",
+          "status": "verificar"
+        }
+      ],
+      "evidencia": "Entre os participantes que tiveram conta invadida, houve casos ligados a roubo ou furto do aparelho. Com o celular desbloqueado, o ladrão alcança e-mail, redes e banco.",
+      "passos": {
+        "android": [
+          "Abra [[Configurações › Google › Todos os serviços › Proteção contra roubo]].",
+          "Ative o [[Bloqueio por detecção de roubo]] e o [[Bloqueio remoto]].",
+          "Em [[Configurações › Google › Encontre Meu Dispositivo]], confirme que a função está ligada."
+        ],
+        "ios": [
+          "Abra [[Ajustes]], toque no seu nome › [[Buscar › Buscar iPhone]] e ative.",
+          "Em [[Ajustes › Face ID e Código]], ative a [[Proteção para Dispositivo Roubado]].",
+          "Com ela ligada, trocar a senha da Conta Apple longe de casa exige o seu rosto ou a sua digital."
+        ]
+      },
+      "nota": "Anote em papel o e-mail e a senha da conta principal. Sem eles, não dá para bloquear o aparelho de outro celular."
+    }
+  ]
+}

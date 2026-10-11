@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Autoavaliação gratuita que mostra quais proteções ativar no Android ou no iPhone, em ordem de prioridade.">
+<title>Checkup de Segurança do Celular</title>
+<link rel="stylesheet" href="css/estilo.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Autoavaliação · cerca de 3 minutos</span>
+    <h1>Checkup de Segurança do Celular</h1>
+    <p class="lead">Responda oito perguntas sobre o seu aparelho. A ferramenta mostra o que já está protegido, o que falta ajustar e o caminho exato nos menus do Android ou do iPhone, começando pelo que mais pesa contra golpes.</p>
+    <p class="privacy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>As respostas ficam só no seu navegador. Nada é enviado, gravado em servidor ou associado a você.</span></p>
+    <div class="tools">
+      <button type="button" class="btn" id="letra" aria-pressed="false">A+ Letra maior</button>
+    </div>
+  </header>
+
+  <p class="erro" id="erro" hidden>Não foi possível carregar as perguntas. Recarregue a página. Se você abriu o arquivo direto do computador, use o endereço publicado ou um servidor local (veja o README).</p>
+
+  <div class="grid">
+    <section aria-labelledby="t-perg">
+      <h2 id="t-perg">Seu aparelho</h2>
+      <div class="plat" role="group" aria-label="Sistema do celular">
+        <button type="button" id="p-android" data-p="android" aria-pressed="true">Android</button>
+        <button type="button" id="p-ios" data-p="ios" aria-pressed="false">iPhone (iOS)</button>
+      </div>
+      <form id="form" class="cards" novalidate></form>
+      <button type="button" class="btn" id="limpar">Limpar respostas</button>
+    </section>
+
+    <section class="result" aria-labelledby="t-res">
+      <h2 id="t-res">Seu diagnóstico</h2>
+      <div class="score" aria-live="polite">
+        <div class="big" id="big">0 <small>de 8 proteções em dia</small></div>
+        <div class="meter" id="meter" aria-hidden="true"></div>
+        <p id="resumo" class="note">Responda às perguntas para ver o diagnóstico.</p>
+        <div class="legend"><span class="l-ok">Em dia</span><span class="l-ajustar">Ajustar</span><span class="l-verificar">Conferir</span><span class="l-vazio">Sem resposta</span></div>
+        <div class="tools">
+          <button type="button" class="btn primary" id="copiar" hidden>Copiar meu plano de ajustes</button>
+        </div>
+        <p id="copiado" role="status"></p>
+        <textarea id="plano-texto" readonly hidden aria-label="Plano de ajustes em texto"></textarea>
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+  </div>
+
+  <div class="help" id="invadida">
+    <h2>Minha conta foi invadida. E agora?</h2>
+    <p class="note">Na pesquisa que deu origem a esta ferramenta, 7 em cada 10 pessoas que tiveram uma conta invadida não sabiam dizer como aquilo aconteceu. Agir rápido, na ordem abaixo, limita o estrago.</p>
+    <ol>
+      <li><strong>Avise seus contatos por outro canal.</strong> Diga que qualquer pedido de dinheiro ou de código vindo da conta invadida é golpe.</li>
+      <li><strong>WhatsApp:</strong> entre de novo na conta com o seu número, usando o código que chega por SMS. Isso desconecta quem estiver usando. Se o invasor tiver criado um PIN, siga a orientação da <a href="https://faq.whatsapp.com/" target="_blank" rel="noopener noreferrer">Central de Ajuda do WhatsApp</a>.</li>
+      <li><strong>E-mail principal:</strong> troque a senha a partir de um aparelho de confiança e encerre as sessões que você não reconhece. Na Conta do Google, use o <a href="https://myaccount.google.com/security-checkup" target="_blank" rel="noopener noreferrer">Checkup de segurança</a>. Na Conta Apple, revise a lista de dispositivos em <a href="https://account.apple.com/" target="_blank" rel="noopener noreferrer">account.apple.com</a>.</li>
+      <li><strong>Instagram e Facebook:</strong> use a página de recuperação <a href="https://www.instagram.com/hacked/" target="_blank" rel="noopener noreferrer">instagram.com/hacked</a>.</li>
+      <li><strong>Banco:</strong> ligue para o número que está no verso do cartão ou use o app oficial. Nenhum banco pede senha, código ou transferência "de teste" por telefone.</li>
+      <li><strong>Registre um boletim de ocorrência</strong> pela delegacia online do seu estado. Ele ajuda a contestar transações e a recuperar contas.</li>
+      <li><strong>Depois, volte a este checkup</strong> e ative a verificação em duas etapas nas contas afetadas.</li>
+    </ol>
+  </div>
+
+  <footer>
+    <p>Ferramenta desenvolvida como artefato do Trabalho de Conclusão de Curso de Fernanda Pedrotti Franco (Análise e Desenvolvimento de Sistemas, UNISINOS, 2026). A ordem das recomendações foi definida a partir de um questionário respondido por 142 usuários brasileiros de smartphone.</p>
+    <p class="versao" id="versao"></p>
+    <p>Os nomes dos menus podem variar conforme o fabricante e a versão do sistema. Fontes das instruções:</p>
+    <ul>
+      <li><a href="https://support.apple.com/pt-br/guide/iphone/welcome/ios" target="_blank" rel="noopener noreferrer">Manual do Usuário do iPhone (Apple)</a></li>
+      <li><a href="https://support.google.com/android/" target="_blank" rel="noopener noreferrer">Ajuda do Android (Google)</a></li>
+      <li><a href="https://faq.whatsapp.com/" target="_blank" rel="noopener noreferrer">Central de Ajuda do WhatsApp</a></li>
+      <li><a href="https://cartilha.cert.br/" target="_blank" rel="noopener noreferrer">Cartilha de Segurança para Internet (CERT.br)</a></li>
+    </ul>
+  </footer>
+</div>
+</body>
+</html>
